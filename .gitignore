@@ -1,0 +1,81 @@
+# ==============================================================================
+# Gitignore para Lab 1: LLMOps Benchmark (Ollama + Python + Docker)
+# ==============================================================================
+
+# Entornos virtuales de Python
+.venv/
+venv/
+ENV/
+env/
+
+# Caché y artefactos de Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Ollama y Docker (Contiene modelos de varios GB, caché y claves id_ed25519)
+ollama_data/
+
+# Modelos y pesos de LLMs (por si se descargan localmente)
+*.gguf
+*.bin
+*.safetensors
+*.pt
+*.onnx
+
+# Variables de entorno y credenciales
+.env
+.env.*
+!.env.example
+
+# Archivos de registro / Logs
+*.log
+
+# Archivos del sistema operativo (macOS / Windows / Linux)
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Configuraciones de editores e IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Jupyter Notebooks (si se llegaran a usar en experimentación)
+.ipynb_checkpoints/
+
+# Testing y análisis de código
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# NOTA sobre salidas de benchmark:
+# Si NO deseas versionar los reportes generados por benchmark.py, descomenta las siguientes líneas:
+# resultados_benchmark.csv
+# resultados_benchmark.md
+
